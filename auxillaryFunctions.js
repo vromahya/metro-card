@@ -24,10 +24,15 @@ const getDataAsArray = (inputLines) => {
   return { inputCardBalance, inputPassengerCardsAndDestinations };
 };
 const checkIfReturnJourney = (expenses, card_no) => {
-  const previosJourneys = expenses.filter(
+  console.log(expenses);
+  const previousJourneys = expenses.filter(
     (expense) => expense.card_no === card_no
   );
-  if (previosJourneys.length % 2 === 0) return false;
+  if (previousJourneys.length % 2 === 0) {
+    console.log('false');
+    return false;
+  }
+  console.log(true);
   return true;
 };
 const returnNewCardBalances = (inputCardBalance, expense, cardNo) => {
