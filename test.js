@@ -39,12 +39,12 @@ describe('Unit tests for checkIfReturnJourney', () => {
         card_no: 'MC1',
         cost: 100,
         discount: 0,
-        passenger_type: 'SENIOR_CITIZEN',
-        destination: 'AIRPORT',
+        passenger_type: 'ADULT',
+        destination: 'CENTRAL',
       },
       {
         card_no: 'MC2',
-        cost: 50,
+        cost: 25,
         discount: 0,
         passenger_type: 'KID',
         destination: 'AIRPORT',
@@ -58,17 +58,17 @@ describe('Unit tests for checkIfReturnJourney', () => {
     const expenses = [
       {
         card_no: 'MC1',
-        cost: 100,
+        cost: 50,
         discount: 0,
         passenger_type: 'SENIOR_CITIZEN',
         destination: 'AIRPORT',
       },
       {
         card_no: 'MC2',
-        cost: 50,
+        cost: 100,
         discount: 0,
-        passenger_type: 'KID',
-        destination: 'AIRPORT',
+        passenger_type: 'ADULT',
+        destination: 'CENTRAL',
       },
     ];
     const cardNo = 'MC1';
