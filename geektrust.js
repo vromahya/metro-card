@@ -1,7 +1,6 @@
 const fs = require('fs');
 
 const filename = process.argv[2];
-const zero = 0;
 const {
   getDataAsArray,
   checkIfReturnJourney,
@@ -33,15 +32,15 @@ fs.readFile(filename, 'utf8', (err, data) => {
     const card = inputCardBalance.filter(
       (cardBalance) => cardBalance.card_no === card_no
     );
-    const balance = card[zero].card_balance;
-    const cardNo = card[zero].card_no;
+    const balance = card[0].card_balance;
+    const cardNo = card[0].card_no;
     //to check return journey
     const isReturnJourney = checkIfReturnJourney(expenses, card_no);
 
     let expense = {
       card_no,
-      cost: zero,
-      discount: zero,
+      cost: 0,
+      discount: 0,
       passenger_type,
       destination,
     };
